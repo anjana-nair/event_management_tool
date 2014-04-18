@@ -11,8 +11,13 @@ gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+gem 'therubyracer'
+gem "less-rails"
 gem 'twitter-bootstrap-rails'
-gem 'rename'
+
+gem 'haml-rails'
+
+gem 'rename_app'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -50,5 +55,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :development, :test do
-  gem 'rspec'
+  gem 'rspec-rails'
 end

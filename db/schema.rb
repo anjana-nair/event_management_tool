@@ -11,12 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140417181148) do
+ActiveRecord::Schema.define(version: 20140418113318) do
 
   create_table "conferences", force: true do |t|
     t.text     "topic"
-    t.string   "author"
-    t.date     "date"
+    t.date     "date_of_conference"
+    t.text     "description"
+    t.text     "presenters"
+    t.text     "companies"
+    t.text     "address"
+    t.text     "contact"
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "conferences", ["event_id"], name: "index_conferences_on_event_id", using: :btree
+
+  create_table "events", force: true do |t|
+    t.string   "name"
+    t.date     "date_of_event"
+    t.text     "description"
+    t.text     "presenters"
+    t.text     "companies"
+    t.text     "address"
+    t.text     "contact"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

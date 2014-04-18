@@ -1,6 +1,5 @@
 class ConferencesController < ApplicationController
   before_action :set_conference, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
 
   # GET /conferences
   # GET /conferences.json
@@ -70,6 +69,6 @@ class ConferencesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def conference_params
-      params.require(:conference).permit(:topic, :author, :date)
+      params.require(:conference).permit(:topic, :date_of_conference, :description, :presenters, :companies, :address, :contact, :event_id)
     end
 end

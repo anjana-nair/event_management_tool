@@ -16,12 +16,32 @@
     <%= f.text_area :topic %>
   </div>
   <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
+    <%= f.label :date_of_conference %><br>
+    <%= f.date_select :date_of_conference %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :presenters %><br>
+    <%= f.text_area :presenters %>
+  </div>
+  <div class="field">
+    <%= f.label :companies %><br>
+    <%= f.text_area :companies %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label :contact %><br>
+    <%= f.text_area :contact %>
+  </div>
+  <div class="field">
+    <%= f.label :event %><br>
+    <%= f.text_field :event %>
   </div>
   <div class="actions">
     <%= f.submit %>

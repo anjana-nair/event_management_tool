@@ -6,13 +6,38 @@
 </p>
 
 <p>
-  <strong>Author:</strong>
-  <%= @conference.author %>
+  <strong>Date of conference:</strong>
+  <%= @conference.date_of_conference %>
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @conference.date %>
+  <strong>Description:</strong>
+  <%= @conference.description %>
+</p>
+
+<p>
+  <strong>Presenters:</strong>
+  <%= @conference.presenters %>
+</p>
+
+<p>
+  <strong>Companies:</strong>
+  <%= @conference.companies %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @conference.address %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @conference.contact %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @conference.event %>
 </p>
 
 <%= link_to 'Edit', edit_conference_path(@conference) %> |

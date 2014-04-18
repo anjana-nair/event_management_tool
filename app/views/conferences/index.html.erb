@@ -4,8 +4,13 @@
   <thead>
     <tr>
       <th>Topic</th>
-      <th>Author</th>
-      <th>Date</th>
+      <th>Date of conference</th>
+      <th>Description</th>
+      <th>Presenters</th>
+      <th>Companies</th>
+      <th>Address</th>
+      <th>Contact</th>
+      <th>Event</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,8 +21,13 @@
     <% @conferences.each do |conference| %>
       <tr>
         <td><%= conference.topic %></td>
-        <td><%= conference.author %></td>
-        <td><%= conference.date %></td>
+        <td><%= conference.date_of_conference %></td>
+        <td><%= conference.description %></td>
+        <td><%= conference.presenters %></td>
+        <td><%= conference.companies %></td>
+        <td><%= conference.address %></td>
+        <td><%= conference.contact %></td>
+        <td><%= conference.event %></td>
         <td><%= link_to 'Show', conference %></td>
         <td><%= link_to 'Edit', edit_conference_path(conference) %></td>
         <td><%= link_to 'Destroy', conference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
