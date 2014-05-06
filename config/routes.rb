@@ -1,5 +1,5 @@
 EventManagementTool::Application.routes.draw do
-  resources :conferences
+  resources :presentations
 
   resources :events
 

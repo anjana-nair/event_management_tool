@@ -1,0 +1,12 @@
+<tr>
+        <td><%= presentation.topic %></td>
+        <td><%= presentation.date_of_presentation %></td>
+        <td><%= presentation.description %></td>
+        <td><%= presentation.presenters %></td>
+        <td><%= presentation.companies %></td>
+        <td><%= presentation.address %></td>
+        <td><%= presentation.contact %></td>
+        <td><%= link_to 'Show', presentation %></td>
+        <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
+        <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>

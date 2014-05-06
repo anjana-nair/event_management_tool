@@ -1,10 +1,11 @@
-<%= form_for(@conference) do |f| %>
-  <% if @conference.errors.any? %>
+<%= form_for(@presentation, :remote => true) do |f| %>
+<h1> New Presentation</h1>
+  <% if @presentation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@conference.errors.count, "error") %> prohibited this conference from being saved:</h2>
+      <h2><%= pluralize(@presentation.errors.count, "error") %> prohibited this presentation from being saved:</h2>
 
       <ul>
-      <% @conference.errors.full_messages.each do |msg| %>
+      <% @presentation.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -16,8 +17,8 @@
     <%= f.text_area :topic %>
   </div>
   <div class="field">
-    <%= f.label :date_of_conference %><br>
-    <%= f.date_select :date_of_conference %>
+    <%= f.label :date_of_presentation %><br>
+    <%= f.date_select :date_of_presentation %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
@@ -41,7 +42,7 @@
   </div>
   <div class="field">
     <%= f.label :event %><br>
-    <%= f.text_field :event %>
+    <%= collection_select(:presentation, :event_id, Event.all, :id, :name)%>
   </div>
   <div class="actions">
     <%= f.submit %>

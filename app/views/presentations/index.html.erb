@@ -1,16 +1,15 @@
-<h1>Listing conferences</h1>
+<h1>Listing presentations</h1>
 
 <table>
   <thead>
     <tr>
       <th>Topic</th>
-      <th>Date of conference</th>
+      <th>Date of presenation</th>
       <th>Description</th>
       <th>Presenters</th>
       <th>Companies</th>
       <th>Address</th>
       <th>Contact</th>
-      <th>Event</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,24 +17,12 @@
   </thead>
 
   <tbody>
-    <% @conferences.each do |conference| %>
-      <tr>
-        <td><%= conference.topic %></td>
-        <td><%= conference.date_of_conference %></td>
-        <td><%= conference.description %></td>
-        <td><%= conference.presenters %></td>
-        <td><%= conference.companies %></td>
-        <td><%= conference.address %></td>
-        <td><%= conference.contact %></td>
-        <td><%= conference.event %></td>
-        <td><%= link_to 'Show', conference %></td>
-        <td><%= link_to 'Edit', edit_conference_path(conference) %></td>
-        <td><%= link_to 'Destroy', conference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <% @presentations.each do |presentation| %>
+      <%= render "presentation", :presentation => presentation%>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Conference', new_conference_path %>
+<%= link_to 'New presentation', new_presentation_path,  :remote => true, :id => "new_presentation_link" %>

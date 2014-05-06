@@ -1,3 +1,3 @@
-class Conference < ActiveRecord::Base
+class Presentation < ActiveRecord::Base
   belongs_to :event
 end

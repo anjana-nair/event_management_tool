@@ -1,4 +1,4 @@
-json.array!(@conferences) do |conference|
-  json.extract! conference, :id, :topic, :date_of_conference, :description, :presenters, :companies, :address, :contact, :event_id
-  json.url conference_url(conference, format: :json)
+json.array!(@presentations) do |presentation|
+  json.extract! presentation, :id, :topic, :date_of_presentation, :description, :presenters, :companies, :address, :contact, :event_id
+  json.url presentation_url(presentation, format: :json)
 end
