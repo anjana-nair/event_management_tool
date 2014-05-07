@@ -18,6 +18,7 @@ gem 'twitter-bootstrap-rails'
 gem 'haml-rails'
 
 gem 'rename_app'
+gem 'heroku'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
