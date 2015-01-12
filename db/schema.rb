@@ -11,22 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140418113318) do
-
-  create_table "conferences", force: true do |t|
-    t.text     "topic"
-    t.date     "date_of_conference"
-    t.text     "description"
-    t.text     "presenters"
-    t.text     "companies"
-    t.text     "address"
-    t.text     "contact"
-    t.integer  "event_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "conferences", ["event_id"], name: "index_conferences_on_event_id", using: :btree
+ActiveRecord::Schema.define(version: 20140930044803) do
 
   create_table "events", force: true do |t|
     t.string   "name"
@@ -39,6 +24,40 @@ ActiveRecord::Schema.define(version: 20140418113318) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "locations", force: true do |t|
+    t.string   "city"
+    t.string   "pincode"
+    t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "presentations", force: true do |t|
+    t.text     "topic"
+    t.date     "date_of_presentation"
+    t.text     "description"
+    t.text     "presenters"
+    t.text     "companies"
+    t.text     "address"
+    t.text     "contact"
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "presentations", ["event_id"], name: "index_presentations_on_event_id", using: :btree
+
+  create_table "settings", force: true do |t|
+    t.string   "var",                   null: false
+    t.text     "value"
+    t.integer  "thing_id"
+    t.string   "thing_type", limit: 30
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "settings", ["thing_type", "thing_id", "var"], name: "index_settings_on_thing_type_and_thing_id_and_var", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
