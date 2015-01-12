@@ -14,6 +14,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'therubyracer'
 gem "less-rails"
 gem 'twitter-bootstrap-rails'
+gem 'setler'
 
 gem 'haml-rails'
 
@@ -46,7 +47,7 @@ end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
-
+gem 'rails-observers'
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -58,4 +59,5 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'le'
 end
